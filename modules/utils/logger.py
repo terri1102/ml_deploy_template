@@ -1,6 +1,7 @@
 import logging
 from typing import List
 
+
 class Singleton(type):
     _instances = {}
 
@@ -9,15 +10,14 @@ class Singleton(type):
             cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
         return cls._instances[cls]
 
+
 class ApplicationLogger(metaclass=Singleton):
     def __init__(self):
         self.logger = self.get_logger()
-    
+
     def get_logger(self, log_types: List = ["console"]):
         logger = logging.getLogger()
-        formatter = logging.Formatter(
-                "%(asctime)s - %(levelname)s - %(message)s"
-            )
+        formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
         if "console" in log_types:
             console_handler = logging.StreamHandler()
