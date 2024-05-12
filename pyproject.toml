@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "rolling-update"
+version = "0.1.0"
+description = ""
+authors = ["Boyoon Jang <terricodes@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+black = "^22.10.0"
+flake8 = "^5.0.4"
+pre-commit = "^2.20.0"
+pytest = "^7.2.0"
+fastapi = "^0.88.0"
+uvicorn = "^0.20.0"
+requests = "^2.28.1"
+httpx = "^0.23.1"
+python-dotenv = "1.0.0"
+slack-bolt = "^1.18.0"
+slack-sdk = "^3.21.3"
+aiohttp = "^3.8.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
